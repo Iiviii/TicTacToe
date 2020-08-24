@@ -1,5 +1,6 @@
 .body{
     background-color: #0f0f3e;
+    font-family: sans-serif;
 }
 .container{
     max-width: 1000px;
@@ -39,11 +40,31 @@
 }
 .grid{
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 100px;
     background-color: #45455e;
 }
 
+.x::after{
+    content: 'X';
+    font-size: 90px;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.o::after{
+    content: 'O';
+    font-size: 90px;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+.won::after{
+    color: #c71740;
+}
 
 .btns{
     display: flex;
@@ -53,7 +74,7 @@
 .btn{
     padding: 15px 0px;
 }
-.btn a{
+.btn span{
     font-size: 16px;
     padding: 15px 45px;
     color: #000;
@@ -61,6 +82,7 @@
     background-color: #f1ce32;
     
 }
+
 
 @media only screen and (max-width: 600px){
     .container{
@@ -82,13 +104,19 @@
         width: 70px;
         height: 70px;
     }
+    .x::after{
+        font-size: 60px;
+    }
+    .o::after{
+        font-size: 60px;
+    }
     .btns{
         margin: 30px;
     }
     .btn{
         padding: 10px 0px;
     }
-    .btn a{
+    .btn span{
         font-size: 12px;
         padding: 10px 35px;
     }
